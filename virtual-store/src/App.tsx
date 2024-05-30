@@ -10,7 +10,7 @@ function App() {
     <>
     
     <Navbar />
-    <Hero />
+    <Hero Primero="Tecnologia" segundo="Renovada"/>
     <Home />
     <Footer />
     </>

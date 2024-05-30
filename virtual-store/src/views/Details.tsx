@@ -1,10 +1,12 @@
 import styles from "./Details.module.css";
 import Navbar from "../components/Navbar";
+import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 function Detalles() {
   return (
     <>
       <Navbar />
+      <Hero Primero="Detalles" segundo="Del producto"/>
         <main>
           <div className={styles["details-container"]}>
             <div id="details" className={styles["columns-container"]}>

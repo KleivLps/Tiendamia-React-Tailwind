@@ -1,6 +1,8 @@
 import styles from "./Cart.module.css"
 import Navbar from "../components/Navbar"
+import Hero from "../components/Hero"
 import Footer from "../components/Footer"
+
 
 function Carrito (){
 
@@ -8,6 +10,7 @@ function Carrito (){
         <>
         
         <Navbar/>
+        <Hero Primero=" Mi carrito"  segundo= "De compras" />
         <main>
         <article className={styles["product-cart"]}>
           <img
