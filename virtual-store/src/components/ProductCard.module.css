@@ -1,20 +1,10 @@
-/* MAIN PRODUCTS */
-.product-container {
-    width: 1080px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  
-  /* CARD */
-  .product-card {
+.product-card {
     background-color: #f0f0f0;
     color: #383838;
     border-radius: 15px;
     width: 250px;
     margin: 15px;
     text-decoration: none;
-  
   }
   .product-img {
     width: 100%;

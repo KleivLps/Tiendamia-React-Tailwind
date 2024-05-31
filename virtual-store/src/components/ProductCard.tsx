@@ -1,30 +1,27 @@
-import styles from "./ProductCard.module.css"
-import { Link } from "react-router-dom"
+import styles from "./ProductCard.module.css";
+import { Link } from "react-router-dom";
 
-function Productos() {
+function Productos(props) {
+  const { id, title, price, color, image, descuento } = props;
 
-    return(
-        <>
-    <Link className={styles["product-card"]} to="./Details/1">
-          <img
-            className={styles["product-img"]}
-            src="https://i.postimg.cc/kX8PKZpq/ipad2.jpg"
-            alt="iPad Pro 12.9"
-          />
-          <div className={styles["product-info"]}>
-            <span className={styles["product-title"]}>iPad Pro 12.9</span>
-            <span className={styles["product-description"]}>Silver</span>
-            <div className={styles["product-price-block"]}>
-              <span className={styles["product-price"]}>900000</span>
-              <span className={styles["product-discount"]}>50% Off</span>
-            </div>
-            <div className={styles["product-tax-policy"]}>
-              Incluye impuesto País y percepción AFIP
-            </div>
+  return (
+    <>
+      <Link key={id} className={styles["product-card"]} to={"./details/" + id}>
+        <img className={styles["product-img"]} src={image} alt={id} />
+        <div className={styles["product-info"]}>
+          <span className={styles["product-title"]}>{title}</span>
+          <span className={styles["product-description"]}>{color}</span>
+          <div className={styles["product-price-block"]}>
+            <span className={styles["product-price"]}>S/{price}</span>
+            <span className={styles["product-discount"]}>{descuento}</span>
           </div>
-        </Link>
-        </>
-    )
-} 
+          <div className={styles["product-tax-policy"]}>
+            Incluye impuesto País y percepción AFIP
+          </div>
+        </div>
+      </Link>
+    </>
+  );
+}
 
-export default Productos
+export default Productos;

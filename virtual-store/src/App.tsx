@@ -5,13 +5,15 @@ import { createBrowserRouter } from "react-router-dom";
 import { RouterProvider } from "react-router-dom";
 import NotFound from "./components/NotFound";
 
+
+const browserRouter = createBrowserRouter([
+  { path: "/", element: <Home/>},
+  { path: "/details/:id", element: <Detalles/>},
+  { path: "/Cart", element: <Carrito/>},
+  { path: "/*", element: <NotFound/>}  
+]) 
+
 function App() {
-   const browserRouter = createBrowserRouter([
-    { path: "/", element: <Home/>},
-    { path: "/Details/:id", element: <Detalles/>},
-    { path: "/Cart", element: <Carrito/>},
-    { path: "/*", element: <NotFound/>}  
-  ]) 
   return (
     <RouterProvider router={browserRouter} /> 
   );

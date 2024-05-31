@@ -9,7 +9,7 @@ function Carrito (){
     return (
         <>
         
-        <Navbar/>
+        <Navbar search={false} />
         <Hero Primero=" Mi carrito"  segundo= "De compras" />
         <main>
         <article className={styles["product-cart"]}>
@@ -42,7 +42,7 @@ function Carrito (){
               id="P7Q8R90"
             />
           </div>
-          <strong className={styles["price"]}>AR$ $800000</strong>
+          <strong className={styles["price"]}> S/800000</strong>
         </article>
         <div className={styles["cart-resume"]}>
           <div className={styles["cart-data"]}>
@@ -53,7 +53,7 @@ function Carrito (){
             </h2>
             <div className={styles["cart-total"]}>
               <h3>Total</h3>
-              <strong className={styles["cart-price"]}>$800000</strong>
+              <strong className={styles["cart-price"]}>S/800000</strong>
             </div>
             <small className={styles["cart-tax"]}>
               Incluye impuesto PAIS y percepción AFIP.

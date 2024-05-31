@@ -1,67 +1,29 @@
-import styles from "./Oferta.module.css"
+import styles from "./Oferta.module.css";
+import products from "../assets/product";
+import Productos from "./ProductCard";
 
-function Oferta (){
-    return(
-        <div className={styles["sales-block"]}>
-              <h2 className={styles["sales-title"]}>Ofertas de la semana</h2>
-              <div id="product-container" className={styles["product-container"]}>
-                <a className={styles["product-card"]} href="./details.html">
-                  <img
-                    className={styles["product-img"]}
-                    src="https://i.postimg.cc/2ymFtsTn/kindle2.jpg"
-                    alt="Kindle Paperwhite"
-                  />
-                  <div className={styles["product-info"]}>
-                    <span className={styles["product-title"]}>Kindle Paperwhite</span>
-                    <span className={styles["product-description"]}>Black</span>
-                    <div className={styles["product-price-block"]}>
-                      <span className={styles["product-price"]}>100000</span>
-                      <span className={styles["product-discount"]}>50% Off</span>
-                    </div>
-                    <div className={styles["product-tax-policy"]}>
-                      Incluye impuesto País y percepción AFIP
-                    </div>
-                  </div>
-                </a>
-                <a className={styles["product-card"]} href="./details.html">
-                  <img
-                    className={styles["product-img"]}
-                    src="https://i.postimg.cc/2ymFtsTn/kindle2.jpg"
-                    alt="Kindle Paperwhite"
-                  />
-                  <div className={styles["product-info"]}>
-                    <span className={styles["product-title"]}>Kindle Paperwhite</span>
-                    <span className={styles["product-description"]}>Black</span>
-                    <div className={styles["product-price-block"]}>
-                      <span className={styles["product-price"]}>100000</span>
-                      <span className={styles["product-discount"]}>50% Off</span>
-                    </div>
-                    <div className={styles["product-tax-policy"]}>
-                      Incluye impuesto País y percepción AFIP
-                    </div>
-                  </div>
-                </a>
-                <a className={styles["product-card"]} href="./details.html">
-                  <img
-                    className={styles["product-img"]}
-                    src="https://i.postimg.cc/2ymFtsTn/kindle2.jpg"
-                    alt="Kindle Paperwhite"
-                  />
-                  <div className={styles["product-info"]}>
-                    <span className={styles["product-title"]}>Kindle Paperwhite</span>
-                    <span className={styles["product-description"]}>Black</span>
-                    <div className={styles["product-price-block"]}>
-                      <span className={styles["product-price"]}>100000</span>
-                      <span className={styles["product-discount"]}>50% Off</span>
-                    </div>
-                    <div className={styles["product-tax-policy"]}>
-                      Incluye impuesto País y percepción AFIP
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-    )
+function Oferta() {
+  const onsale = products.filter((each) => each.onsale);
+  return (
+    <>
+      <div className={styles["sales-block"]}>
+        <h2 className={styles["sales-title"]}>Ofertas de la semana</h2>
+        <div id="product-container" className={styles["product-container"]}>
+          {onsale.map((each, index) => (
+            <Productos
+              key={index}
+              image={each.images[0]}
+              id={each.id}
+              title={each.title}
+              price={each.price}
+              color={each.colors[0]}
+              
+            />
+          ))}
+        </div>
+      </div>
+    </>
+  );
 }
 
-export default Oferta
+export default Oferta;
