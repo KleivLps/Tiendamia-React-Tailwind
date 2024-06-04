@@ -79,7 +79,6 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
         <div className={styles["checkout-container"]}>
           <span className={styles["checkout-total-label"]}>Total:</span>
           <h2 id="price" className={styles["checkout-total-price"]}>
-            S/{(product.price * quantity).toLocaleString()}
             S/{precio.toLocaleString()}
           </h2>
           <p className={styles["checkout-description"]}>
