@@ -5,6 +5,7 @@ import { useEffect } from "react";
 interface Product {
   id: string;
   price: number;
+  //Añadido de unit Numbers para despues reemplazarlo en ref
   units: number;
 }
 
@@ -18,6 +19,7 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
 
   //Manejo de estados para la cantidad de productos
   const [quantity, setQuantity] = useState(1);
+  const [precio, actualizarPrecio] = useState(product.price * quantity);
 
   //Manejo de estados para los estilos del botón "Añadir al carrito"
   const [button, setButton] = useState(false);
@@ -39,24 +41,33 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
     }
     const one = productosEnCarrito.find((item) => item.id === product.id);
     if (one) {
-      setQuantity(one.units);
+      actualizarPrecio(one.units * product.price);
       setButton(true);
     } else {
       setQuantity(1);
       setButton(false);
+      actualizarPrecio(product.price);
     }
-  }, [product.id, storedProducts]);
+  }, [product.id, storedProducts, product.price]);
+
+  //Añadiendo Logica para incluir el Localstorage con el array de los productos del carrito
 
   const manageCart = () => {
     const one = productosEnStorage.find((each) => each.id === product.id);
     if (!one) {
-      product.units = quantity;
-      productosEnStorage.push(product);
+      const nuevoProducto = {
+        ...product,
+        units: quantity,
+        price: product.price * quantity,
+      };
+      productosEnStorage.push(nuevoProducto);
       setButton(true);
     } else {
       productosEnStorage = productosEnStorage.filter(
         (each) => each.id !== product.id
       );
+      setQuantity(1);
+      actualizarPrecio(product.price);
       setButton(false);
     }
     localStorage.setItem("cart", JSON.stringify(productosEnStorage));
@@ -69,6 +80,7 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
           <span className={styles["checkout-total-label"]}>Total:</span>
           <h2 id="price" className={styles["checkout-total-price"]}>
             S/{(product.price * quantity).toLocaleString()}
+            S/{precio.toLocaleString()}
           </h2>
           <p className={styles["checkout-description"]}>
             Incluye impuesto general de ventas (I.G.V), no incluye costo de
@@ -99,11 +111,19 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
               <input
                 type="number"
                 min="1"
-                defaultValue={quantity}
                 ref={units}
+                value={
+                  button
+                    ? productosEnStorage.find((item) => item.id === product.id)
+                        ?.units
+                    : quantity
+                } //Añadiendo un comprobador para evitar que units.current alerte de un problema
                 onChange={() => {
                   if (units.current) {
                     setQuantity(Number(units.current.value));
+                    actualizarPrecio(
+                      Number(units.current.value) * product.price
+                    );
                   }
                 }}
               />
