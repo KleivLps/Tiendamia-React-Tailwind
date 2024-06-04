@@ -1,6 +1,9 @@
 import styles from "./imagesProductDetails.module.css";
+import { useState } from "react";
+import { useEffect } from "react";
 
 interface Product {
+  title: string
   images: string[];
 }
 
@@ -9,6 +12,7 @@ interface ImagesProductDetailsProp{
 }
 
 function ImagesProductDetails({ product }: ImagesProductDetailsProp) {
+  //añadido del state para renderizar las fotos en miniatura
   return (
     <>
       <section className={styles["product-images-block"]}>
