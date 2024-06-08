@@ -35,7 +35,7 @@ const product1 = new Product(
   20,
   ["../mac-1.jpg", "../public/mac-2.jpg", "../public/mac-3.jpg"],
   ["gray", "white"],
-  "20%off",
+  20,
   "Incluye impuesto País y percepción AFIP",
   true
 );
@@ -47,7 +47,7 @@ const product2 = new Product(
   20,
   ["../public/hp-1.jpg", "../public/hp-2.jpg", "../public/hp-3.jpg"],
   ["black", "gray"],
-  "10%off",
+  10,
 
   "Incluye impuesto País y percepción AFIP",
   true
@@ -64,7 +64,7 @@ const product3 = new Product(
     "../public/lenovo-3.webp",
   ],
   ["black", "bluesky"],
-  "22%off",
+  22,
 
   "Incluye impuesto País y percepción AFIP",
   false
@@ -77,7 +77,7 @@ const product4 = new Product(
   20,
   ["../public/acer-1.jpg", "../public/acer-2.jpg", "../public/acer-3.jpg"],
   ["black", "redvine"],
-  "11%off",
+  11,
 
   "Incluye impuesto País y percepción AFIP"
   ,true
@@ -90,7 +90,7 @@ const product5 = new Product(
   20,
   ["../public/asus-1.jpg", "../public/asus-2.jpg", "../public/asus-3.jpg"],
   ["black", "blue"],
-  "18%off",
+  18,
 
   "Incluye impuesto País y percepción AFIP",
   true
@@ -103,7 +103,7 @@ const product6 = new Product(
   20,
   ["../public/asus-4.webp", "../public/asus-5.webp", "../public/asus-6.webp"],
   ["black", "bluesky"],
-  "50%off",
+  50,
 
   "Incluye impuesto País y percepción AFIP",
   true
@@ -119,7 +119,7 @@ const product7 = new Product(
     "https://i.postimg.cc/2ymFtsTn/kindle2.jpg",
   ],
   ["Black", "White"],
-  "30%off",
+  30,
   "Incluye impuesto País y percepción AFIP",
   false
 );
@@ -134,7 +134,7 @@ const product8 = new Product(
     "https://i.postimg.cc/nzqG0FKH/kindle1.jpg",
   ],
   ["Black", "White"],
-  "40%off",
+  40,
   "Incluye impuesto País y percepción AFIP"
 );
 const product9 = new Product(
@@ -149,7 +149,7 @@ const product9 = new Product(
     "https://i.postimg.cc/wvQGfQH4/bose3.jpg",
   ],
   ["Black", "Silver"],
-  "32%off",
+  32,
   "Incluye impuesto País y percepción AFIP"
 );
 const product10 = new Product(
@@ -164,7 +164,7 @@ const product10 = new Product(
     "https://i.postimg.cc/JnLF52wB/bose2.jpg",
   ],
   ["Black", "Silver"],
-  "28%off",
+  28,
   "Incluye impuesto País y percepción AFIP",
   true
 );
@@ -179,7 +179,7 @@ const product11 = new Product(
     "https://i.postimg.cc/Y91Q1tYQ/mock2.jpg",
   ],
   ["Silver", "Space Gray"],
-  "8%off",
+  8,
   "Incluye impuesto País y percepción AFIP"
 );
 const product12 = new Product(
@@ -193,7 +193,7 @@ const product12 = new Product(
     "https://i.postimg.cc/HxGQcrcp/mock1.jpg",
   ],
   ["Silver", "Space Gray"],
-  "15%off",
+  15,
   "Incluye impuesto País y percepción AFIP"
 );
 const product13 = new Product(
@@ -208,7 +208,7 @@ const product13 = new Product(
     "https://i.postimg.cc/Y91Q1tYQ/mock2.jpg",
   ],
   ["Silver", "Space Gray"],
-  "20%off",
+  20,
   "Incluye impuesto País y percepción AFIP"
 );
 const product14 = new Product(
@@ -222,7 +222,7 @@ const product14 = new Product(
     "https://i.postimg.cc/HxGQcrcp/mock1.jpg",
   ],
   ["Silver", "Space Gray"],
-  "27%off",
+  27,
   "Incluye impuesto País y percepción AFIP"
 );
 const product15 = new Product(
@@ -237,7 +237,7 @@ const product15 = new Product(
     "https://i.postimg.cc/Y91Q1tYQ/mock2.jpg",
   ],
   ["Black", "Silver"],
-  "14%off",
+  14,
   "Incluye impuesto País y percepción AFIP"
 );
 const product16 = new Product(
@@ -251,7 +251,7 @@ const product16 = new Product(
     "https://i.postimg.cc/Y91Q1tYQ/mock2.jpg",
   ],
   ["Black", "Silver"],
-  "25%off",
+  25,
   "Incluye impuesto País y percepción AFIP"
 );
 const product17 = new Product(
@@ -266,7 +266,7 @@ const product17 = new Product(
     "https://i.postimg.cc/j55rfSGF/galaxy3.jpg",
   ],
   ["Black", "Silver", "White"],
-  "34%off",
+  34,
   "Incluye impuesto País y percepción AFIP"
 );
 const product18 = new Product(
@@ -281,7 +281,7 @@ const product18 = new Product(
     "https://i.postimg.cc/j55rfSGF/galaxy3.jpg",
   ],
   ["Black", "Silver", "White"],
-  "33%off",
+  33,
   "Incluye impuesto País y percepción AFIP"
 );
 const product19 = new Product(
@@ -295,7 +295,7 @@ const product19 = new Product(
     "https://i.postimg.cc/3N278cM8/watch1.jpg",
   ],
   ["Space Gray", "Silver", "Gold"],
-  "40%off",
+  40,
   "Incluye impuesto País y percepción AFIP"
 );
 const product20 = new Product(
@@ -309,7 +309,7 @@ const product20 = new Product(
     "https://i.postimg.cc/VstzWdJx/watch.jpg",
   ],
   ["Space Gray", "Silver", "Gold"],
-  "17%off",
+  17,
   "Incluye impuesto País y percepción AFIP"
 );
 const product21 = new Product(
@@ -323,7 +323,7 @@ const product21 = new Product(
     "https://i.postimg.cc/jqBrWKvM/ipad2.jpg",
   ],
   ["Silver", "Space Gray", "Gold"],
-  "26%off",
+  26,
   "Incluye impuesto País y percepción AFIP"
 );
 const product22 = new Product(
@@ -337,7 +337,7 @@ const product22 = new Product(
     "https://i.postimg.cc/kX8PKZpq/ipad.jpg",
   ],
   ["Silver", "Space Gray", "Gold"],
-  "28%off",
+  28,
   "Incluye impuesto País y percepción AFIP"
 );
 const product23 = new Product(
@@ -352,7 +352,7 @@ const product23 = new Product(
     "https://i.postimg.cc/7ht8XryZ/sony2.jpg",
   ],
   ["Black", "Silver"],
-  "3%off",
+  3,
   "Incluye impuesto País y percepción AFIP"
 );
 const product24 = new Product(
@@ -367,7 +367,7 @@ const product24 = new Product(
     "https://i.postimg.cc/7ht8XryZ/sony2.jpg",
   ],
   ["Black", "Silver"],
-  "11%off",
+  11,
   "Incluye impuesto País y percepción AFIP"
 );
 const product25 = new Product(
@@ -381,7 +381,7 @@ const product25 = new Product(
     "https://i.postimg.cc/8k6zXFrd/gopro2.png",
   ],
   ["Black"],
-  "9%off",
+  9,
   "Incluye impuesto País y percepción AFIP"
 );
 const product26 = new Product(
@@ -395,7 +395,7 @@ const product26 = new Product(
     "https://i.postimg.cc/WbcbB2MB/gopro12.png",
   ],
   ["Black"],
-  "21%off",
+  21,
   "Incluye impuesto País y percepción AFIP"
 );
 

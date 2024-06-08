@@ -10,11 +10,27 @@
   .checkout-total-label {
     color: #ff3b3c;
   }
+  .checkout-total-label-2 {
+    color: #ff3b3c;
+    display: flex;
+  }
   .checkout-total-price {
     font-size: 28px;
     font-weight: 700;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    
   }
+  .checkout-total-price-2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 10px;
+    text-decoration: line-through;
+   
+  }
+  
   .checkout-description {
     line-height: 20.4px;
     word-wrap: break-word;
@@ -75,4 +91,9 @@
     padding: 10px;
     margin: 10px;
   }
-  
+  h6 {
+    font-size: 13px;
+    color: #428f13;
+    margin-left: 10px;
+
+  }

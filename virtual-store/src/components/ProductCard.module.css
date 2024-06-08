@@ -1,10 +1,11 @@
 .product-card {
     background-color: #f0f0f0;
     color: #383838;
-    border-radius: 15px;
-    width: 250px;
+    border-radius: 25px;
+    width: 300px;
     margin: 15px;
     text-decoration: none;
+    
   }
   .product-img {
     width: 100%;
@@ -19,17 +20,22 @@
     box-sizing: border-box;
   }
   .product-title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
     font-weight: 700;
     line-height: 25px;
-    word-wrap: break-word;
-    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp:2
+    
   }
   .product-description {
     font-size: 12px;
     font-weight: 400;
     color: #383838;
     margin-bottom: 5px;
+  
   }
   .product-price-block {
     display: flex;
@@ -38,15 +44,20 @@
     align-items: center;
   }
   .product-price-block .product-price {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
   }
+  .product-price-block .product-price-2 {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: line-through;
+  }
   .product-price-block .product-discount {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 700;
     color: #428f13;
   }
   .product-tax-policy {
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 300;
   }

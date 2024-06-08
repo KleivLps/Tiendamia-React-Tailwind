@@ -12,7 +12,7 @@ function Oferta() {
           {onsale.map((each, index) => (
             <Productos
               key={index}
-              image={each.images[0]}
+              images={each.images[0]}
               id={each.id}
               title={each.title}
               price={each.price}

@@ -5,6 +5,7 @@ import { useEffect } from "react";
 interface Product {
   id: string;
   price: number;
+  descuento: number;
   //Añadido de unit Numbers para despues reemplazarlo en ref
   units: number;
 }
@@ -16,10 +17,12 @@ interface ProductCheckoutProp {
 function ProductCheckout({ product }: ProductCheckoutProp) {
   //añadido del useRef
   const units = useRef<HTMLInputElement>(null);
+  const PrecioDescuento =
+    product.price - (product.price * product.descuento) / 100;
 
   //Manejo de estados para la cantidad de productos
   const [quantity, setQuantity] = useState(1);
-  const [precio, actualizarPrecio] = useState(product.price * quantity);
+  const [precio, actualizarPrecio] = useState(PrecioDescuento * quantity);
 
   //Manejo de estados para los estilos del botón "Añadir al carrito"
   const [button, setButton] = useState(false);
@@ -41,14 +44,14 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
     }
     const one = productosEnCarrito.find((item) => item.id === product.id);
     if (one) {
-      actualizarPrecio(one.units * product.price);
+      actualizarPrecio(one.units * PrecioDescuento);
       setButton(true);
     } else {
       setQuantity(1);
       setButton(false);
-      actualizarPrecio(product.price);
+      actualizarPrecio(PrecioDescuento);
     }
-  }, [product.id, storedProducts, product.price]);
+  }, [product.id, storedProducts, PrecioDescuento]);
 
   //Añadiendo Logica para incluir el Localstorage con el array de los productos del carrito
 
@@ -58,7 +61,7 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
       const nuevoProducto = {
         ...product,
         units: quantity,
-        price: product.price * quantity,
+        price: PrecioDescuento * quantity,
       };
       productosEnStorage.push(nuevoProducto);
       setButton(true);
@@ -67,7 +70,7 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
         (each) => each.id !== product.id
       );
       setQuantity(1);
-      actualizarPrecio(product.price);
+      actualizarPrecio(PrecioDescuento);
       setButton(false);
     }
     localStorage.setItem("cart", JSON.stringify(productosEnStorage));
@@ -77,9 +80,16 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
     <>
       <div className={styles["product-checkout-block"]}>
         <div className={styles["checkout-container"]}>
+          <span className={styles["checkout-total-label-2"]}>SubTotal:</span>
+          <h2 id="price" className={styles["checkout-total-price-2"]}>
+            S/{product.price}
+          </h2>
           <span className={styles["checkout-total-label"]}>Total:</span>
-          <h2 id="price" className={styles["checkout-total-price"]}>
-            S/{precio.toLocaleString()}
+          <h2 id="price" className={styles["checkout-total-price" ]}>
+            S/{precio.toLocaleString()}{" "}
+            <h6 className={styles["checkout-total-price tamaño"]}>
+              {product.descuento}% OFF
+            </h6>
           </h2>
           <p className={styles["checkout-description"]}>
             Incluye impuesto general de ventas (I.G.V), no incluye costo de
@@ -121,7 +131,7 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
                   if (units.current) {
                     setQuantity(Number(units.current.value));
                     actualizarPrecio(
-                      Number(units.current.value) * product.price
+                      Number(units.current.value) * PrecioDescuento
                     );
                   }
                 }}

@@ -18,14 +18,16 @@ function Detalles() {
     return (
       <>
         <Navbar search={false} />
-        <Hero Primero="Detalles" segundo="Del producto" />
+        {!product && <Hero Primero="Detalles" segundo="Del producto" />}
         <main>
           <div className={styles["details-container"]}>
+            {product && (
             <div id="details" className={styles["columns-container"]}>
               <ImagesProductDetails product={product} />
               <ProductDescriptionDetail product={product} />
               <ProductCheckout product={product} />
             </div>
+            )}
             <Oferta />
           </div>
         </main>

@@ -22,7 +22,7 @@ function Home() {
               title={each.title}
               price={each.price}
               color={each.color}
-              descuento={each.discount}
+              descuento={each.descuento}
               images={each.images[0]} // Solo si quieres la primera imagen
             />
           ))}
