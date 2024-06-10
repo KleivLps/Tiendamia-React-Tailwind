@@ -17,6 +17,7 @@ function Oferta() {
               title={each.title}
               price={each.price}
               color={each.colors[0]}
+              descuento={each.descuento}
               
             />
           ))}
