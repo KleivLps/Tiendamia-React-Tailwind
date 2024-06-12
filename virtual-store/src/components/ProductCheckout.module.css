@@ -30,6 +30,19 @@
     text-decoration: line-through;
    
   }
+
+  .precio {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    color: #428f13;
+    margin-left: 10px;
+  }
+
+  
   
   .checkout-description {
     line-height: 20.4px;
@@ -91,9 +104,4 @@
     padding: 10px;
     margin: 10px;
   }
-  h6 {
-    font-size: 13px;
-    color: #428f13;
-    margin-left: 10px;
-
-  }
+  

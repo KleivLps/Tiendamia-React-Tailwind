@@ -87,9 +87,9 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
           <span className={styles["checkout-total-label"]}>Total:</span>
           <h2 id="price" className={styles["checkout-total-price" ]}>
             S/{precio.toLocaleString()}{" "}
-            <h6 className={styles["checkout-total-price tamaño"]}>
+            <li className={styles["precio"]}>
               {product.descuento}% OFF
-            </h6>
+            </li>
           </h2>
           <p className={styles["checkout-description"]}>
             Incluye impuesto general de ventas (I.G.V), no incluye costo de

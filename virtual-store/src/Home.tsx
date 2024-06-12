@@ -46,7 +46,7 @@ function Home() {
           ))}
         </div>
       </main>
-      <div className='flex items-center justify-end gap-4'>
+      <div className='flex items-center justify-center gap-4'>
         <Button
           variant="secondary"
           disabled={currentPage === 0}
