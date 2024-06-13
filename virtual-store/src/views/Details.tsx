@@ -17,7 +17,7 @@ function Detalles() {
   if (product)
     return (
       <>
-        <Navbar search={false} />
+        <Navbar search={true} />
         <Hero Primero="Detalles" segundo="Del producto" />
         <main>
           <div className={styles["details-container"]}>
