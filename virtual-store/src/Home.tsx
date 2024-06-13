@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
 import products from "./assets/product";
-import styles from "./Home.module.css";
 import { useState } from "react";
 import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -32,7 +31,7 @@ function Home() {
       <Navbar search={true} />
       <Hero Primero="Tecnologia" segundo="Renovada" />
       <main>
-        <div className={styles["product-container"]} id="products">
+        <div className="w-[1080px] flex flex-wrap justify-between" id="products">
           {displayedProducts.map((product, index) => (
             <ProductCard
               key={index}
