@@ -7,6 +7,11 @@
     display: flex;
     justify-content: center;
   }
+  body {
+    background-image: url(.././hero_bg.png); /* Ruta relativa a la imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+  }
   
   .hero-title {
     width: 1080px;

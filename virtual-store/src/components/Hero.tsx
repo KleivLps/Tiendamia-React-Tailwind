@@ -1,19 +1,16 @@
 
-import styles from "./Hero.module.css";
-
-
-
-export default function Hero({Primero,segundo}) {
+function Hero({Primero,segundo}:{Primero:string, segundo:string}) {
   return (
     <>
-      <section className={styles["hero-section"]}>
-        <article className={styles["hero-title"]}>
-          <span className={styles["hero-span"]}>{Primero}</span>
-          <span className={styles["hero-span"]}>{segundo}</span>
+      <section className="h-[200px] bg-cover bg-top-center flex justify-center bg-[url('.././hero_bg.png')] " >
+        <article className= "w-[1080px] flex flex-col items-start justify-center pl-[0px,20px]    " >
+          <span className="text-white font-bold  text-xl leading-7">{Primero}</span>
+          <span className="text-white font-bold text-5xl leading-7 ">{segundo}</span>
         </article>
       </section>
  </>
   );
 }
 
+export default Hero
 

@@ -41,7 +41,7 @@ header {
     justify-content: center;
   }
   
-  .header-input {
+  .header-input { 
     height: 60px;
     border-radius: 15px;
     border: none;
