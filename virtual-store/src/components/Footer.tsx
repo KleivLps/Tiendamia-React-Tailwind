@@ -5,7 +5,9 @@ function Footer() {
   return (
     <>
       <footer className="min-h-64 bg-[#7525a7] flex flex-col items-center p-3 ">
-        <div id="footer" className="w-[1080px] flex justify-between p-2.5 "> {/* footer-container */}
+        <div id="footer" className="w-full flex flex-col justify-between items-center p-[10px]
+        sm:flex-row sm:items-start
+        lg:w-[1080px] "> {/* footer-container */}
           <ul className="w-[170px] list-none p-2.5"> {/* footer-ul */}
             <li className="font-bold text-lg pb-5  "> {/* footer-main-item */}
               <a className="text-white no-underline " /* footer-a */ href="./index.html"> 
