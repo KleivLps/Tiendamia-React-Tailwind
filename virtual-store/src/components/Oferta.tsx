@@ -1,4 +1,4 @@
-import styles from "./Oferta.module.css";
+
 import products from "../assets/product";
 import Productos from "./ProductCard";
 
@@ -6,9 +6,9 @@ function Oferta() {
   const onsale = products.filter((each) => each.onsale);
   return (
     <>
-      <div className={styles["sales-block"]}>
-        <h2 className={styles["sales-title"]}>Ofertas de la semana</h2>
-        <div id="product-container" className={styles["product-container"]}>
+      <div className="w-[1080px] flex flex-wrap justify-center pt-20 pb-20 "> {/* sales-block */}
+        <h2 className=" text-center text-4xl " /* sales-title */ >Ofertas de la semana</h2>
+        <div id="product-container" className="W-[1080px] flex flex-wrap justify-between "> {/* product-container */}
           {onsale.map((each, index) => (
             <Productos
               key={index}
