@@ -1,4 +1,3 @@
-import styles from "./imagesProductDetails.module.css";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -23,14 +22,14 @@ useEffect(()=> {
 
   return (
     <>
-      <section className={styles["product-images-block"]}>
-        <div className={styles["product-images"]}>
+      <section className="flex w-[340px] p-[10px] m-2.5 "> {/* product-images-block */}
+        <div className="w-[44px] m-1  "> {/* product-images */}
           {product.images.map(
             (each, index) =>
               (
                 <img
                   key={index}
-                  className={styles["mini-img"]}
+                  className=" w-[40px] h-[40px] object-cover " /* mini-img */
                   src={each}
                   alt={product.title}
                   onClick={()=> setThumb(each)}
@@ -39,7 +38,7 @@ useEffect(()=> {
           )}
         </div>
         <img
-          className={styles["big-img"]}
+          className=" w-[280px] h-[280px] object-cover " /* big-img */
           id="big-img"
           src={thumb}
           alt={product.title}

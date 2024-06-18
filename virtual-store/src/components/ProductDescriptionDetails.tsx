@@ -1,4 +1,4 @@
-import styles from "./ProductDescriptionDetail.module.css";
+
 
 interface Product {
   title: string;
@@ -13,15 +13,15 @@ interface ProductDescriptionDetailProp{
 function ProductDescriptionDetail({product}: ProductDescriptionDetailProp) {
   return (
     <>
-      <div className={styles["product-description-block"]}>
-        <h1 className={styles["product-title"]}>{product.title}</h1>
-        <form className={styles["product-selector"]}>
-          <fieldset className={styles["product-fieldset"]}>
-            <label className={styles["product-label"]} htmlFor="color">
+      <div className=" flex-col w-[340px] p-[10px] m-[10px] "> {/* product-description-block */}
+        <h1 className="text-black text-3xl font-bold break-words mt-0 ">{product.title}</h1> {/* product-title */}
+        <form className=" my-8"> {/* product-selector */}
+          <fieldset className=" border-none p-0 flex flex-col "> {/* product-fieldset */}
+            <label className=" text-black text-[12px] font-bold " htmlFor="color"> {/* product-label */}
               Color
             </label>
             <select
-              className={styles["product-select"]}
+              className="w-full h-[40px] bg-white rounded-xl border border-1 border-gray-600 M-[10px 0] P-[10px] box-border  " /* product-select */
               id="color"
               defaultValue={product.colors[0]}
             >
@@ -33,8 +33,8 @@ function ProductDescriptionDetail({product}: ProductDescriptionDetailProp) {
             </select>
           </fieldset>
         </form>
-        <div className={styles["product-description"]}>
-          <span className={styles["product-label"]}>Descripción</span>
+        <div className=" my-8 leading-5 text-xl font-normal text-[#383838] mb-[5px]  "> {/* product-description */}
+          <span className=" text-black text-sm leading-5 font-bold ">Descripción</span> {/* product-label */}
           <p>{product.description}</p>
         </div>
       </div>

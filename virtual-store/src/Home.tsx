@@ -30,7 +30,7 @@ function Home() {
     <>
       <Navbar search={true} />
       <Hero Primero="Tecnologia" segundo="Renovada" />
-      <main>
+      <main className="w-full flex justify-center items-center p-[20px]">
         <div className="w-[1080px] flex flex-wrap justify-between" id="products">
           {displayedProducts.map((product, index) => (
             <ProductCard

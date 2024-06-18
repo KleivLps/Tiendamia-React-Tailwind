@@ -1,4 +1,4 @@
-import styles from "./Details.module.css";
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Oferta from "../components/Oferta";
@@ -19,10 +19,10 @@ function Detalles() {
       <>
         <Navbar search={true} />
         <Hero Primero="Detalles" segundo="Del producto" />
-        <main>
-          <div className={styles["details-container"]}>
+        <main className="w-full flex justify-center items-center p-[20px] ">
+          <div className=" w-[1080px] flex flex-wrap  justify-between"> {/* details-container */}
             {product && (
-              <div id="details" className={styles["columns-container"]}>
+              <div id="details" className=" flex justify-center flex-wrap "> {/* columns-container */}
                 <ImagesProductDetails product={product} />
                 <ProductDescriptionDetail product={product} />
                 <ProductCheckout product={product} />
