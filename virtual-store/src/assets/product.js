@@ -22,7 +22,7 @@ class Product {
     this.colors = colors;
     this.descuento = descuento;
     this.taxPolicy = taxPolicy;
-    this.onsale =onsale
+    this.onsale = onsale;
   }
 }
 
@@ -79,8 +79,8 @@ const product11 = new Product(
   ["black", "redvine"],
   11,
 
-  "Incluye impuesto País y percepción AFIP"
-  ,true
+  "Incluye impuesto País y percepción AFIP",
+  true
 );
 const product5 = new Product(
   "005",
@@ -407,78 +407,57 @@ const product27 = new Product(
   [
     "../public/tab-len1.avif",
     "../public/tab-len2.avif",
-    "../public/tab-len3.avif"
+    "../public/tab-len3.avif",
   ],
   ["Black", "Silver"],
   21,
   "Incluye impuesto País y percepción AFIP"
-
-  );
+);
 const product28 = new Product(
   "I2C3W82",
   "Nintendo SWITCH OLED White",
   "incluye Cargador ,mando manuaL ,Marca: NINTENDO Garantía del proveedor:1 año ,Información adicional: No Aplica, Número de certificación: 4902370548495,  Entradas USB:Sin entradas, Conectividad:WiFi/Bluetooth, Entradas HDMI:1.",
   2099,
   1,
-  [
-    "../public/swi-1.avif",
-    "../public/swi-2.avif",
-    "../public/swi-3.avif"
-  ],
+  ["../public/swi-1.avif", "../public/swi-2.avif", "../public/swi-3.avif"],
   ["Black", "White"],
   31,
   "Incluye impuesto País y percepción AFIP"
-
-  );
- const product7 = new Product(
+);
+const product7 = new Product(
   "J2B6Z13",
   "Televisor 55| Lg Uhd 4k Thinq Ai 55ur7300psa (2023)",
   "LG UHD 55 UR7300 4K Smart TV con ThinQ AI (Inteligencia Artificial), 4K Procesador Inteligente α5 generación 6 (2023) Características especiales Panel: 4K UHD 4K Procesador Inteligente α5 generación 6 Sonido Ultra Surround LG ThinQ AI: Inteligencia Artificial Control Estándar.",
   1899,
   1,
-  [
-    "../public/lg-1.avif",
-    "../public/lg-2.avif",
-    "../public/lg-3.avif"
-  ],
+  ["../public/lg-1.avif", "../public/lg-2.avif", "../public/lg-3.avif"],
   ["Black", "Silver"],
   26,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product8 = new Product(
+);
+const product8 = new Product(
   "L2F2C44",
   "Bicicleta Eléctrica Plegable Litio Extraíble FL2 Negro",
   "Esta bicicleta eléctrica GreenLine posee una Velocidad Máxima de 25 km/h de acuerdo a ley, con una Autonomía de 25 - 35 km, lo cual te permite desplazarte de forma cómoda y segura, bien sea para ir a tu trabajo, colegio o de paseo. De la misma forma, con su excelente Motor de 240W y su Batería Litio de 36 voltios y 8 Amperes extraíble, tendrás el rendimiento requerido para llegar a tu destino sin problemas. Posee además frenos de disco en ambas ruedas para mayor seguridad y un sistema de 7 cambios marca SHIMANO te ofrece el equilibrio perfecto entre velocidad y control.",
   2750,
   1,
-  [
-    "../public/bici-1.avif",
-    "../public/bici-2.avif",
-    "../public/bici-3.avif"
-  ],
+  ["../public/bici-1.avif", "../public/bici-2.avif", "../public/bici-3.avif"],
   ["Black", "Silver"],
   24,
   "Incluye impuesto País y percepción AFIP"
-
-  ); 
-  const product9 = new Product(
+);
+const product9 = new Product(
   "H2A7C95",
   "Consola PS5 Digital Slim + Returnal +Ratchet & Clank",
   "¿Qué incluye?=Control inalámbrico SSD de 1 TB, unidad de disco4 2 pies de soporte horizontales Cable HDMI® Cable de alimentación de CA Cable USB, materiales impresos. SALA DE JUEGOS DE ASTRO(Juego preinstalado) Juego Digital (Voucher) - Returnal Juego Digital (Voucher) - Ratchet & Clank: Rift Apart Control inalámbrico SSD de 1 TB, unidad de disco4 2 pies de soporte horizontales Cable HDMI® Cable de alimentación de CA Cable USB, materiales impresos. SALA DE JUEGOS DE ASTRO(Juego preinstalado) Juego Digital (Voucher) - Returnal Juego Digital (Voucher) - Ratchet & Clank: Rift Apart Control inalámbrico SSD de 1 TB, unidad de disco4 2 pies de soporte horizontales Cable HDMI® Cable de alimentación de CA Cable USB, materiales impresos. SALA DE JUEGOS DE ASTRO(Juego preinstalado) Juego Digital (Voucher) - Returnal Juego Digital (Voucher) - Ratchet & Clank: Rift Apart .",
   2299,
   1,
-  [
-    "../public/ps5-1.avif",
-    "../public/ps5-2.avif",
-    "../public/ps5-3.avif"
-  ],
+  ["../public/ps5-1.avif", "../public/ps5-2.avif", "../public/ps5-3.avif"],
   ["Black", "White"],
   5,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product6 = new Product(
+);
+const product6 = new Product(
   "P2V3C16",
   "Apple Watch Series 9 45mm",
   "Batería = Batería de iones de litio recargable integrada, GPS integrado = Sí, Medición de valores corporales = No, Memoria expandible = No, aplica Memoria interna = 64GB, Conexión Bluetooth = Sí, Conexión WiFi = Sí, Recepción de llamadas=Sí,  Resistente al agua = Resistencia al agua de 50 m (diseñado para nadar), Sistema operativo = Watch OS,  Sistema operativo compatible= IOS ,Procesador=Chip S9 SiP.",
@@ -487,14 +466,13 @@ const product28 = new Product(
   [
     "../public/iwatch-1.avif",
     "../public/iwatch-2.avif",
-    "../public/iwatch-3.avif"
+    "../public/iwatch-3.avif",
   ],
   ["Black", "Blue"],
   12,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product4 = new Product(
+);
+const product4 = new Product(
   "G5D8A57",
   "Celular Galaxy S24 256GB",
   "Traducción en Vivo. La forma más fácil de comunicarse, La AI puede resumir sus grabaciones de voz, Redimensionar, retocar. Así de fácil. Un intérprete en tu bolsillo, Es grande, más grande y más rápido, Captura los detalles con la cámara, 50MP. Mega megapíxeles, Realiza fotografías a distancia. Incluso en la oscuridad, Acércate más con cada pellizco, Vapor Chamber más resistente.¡A jugar!, La batería para todo el día es más inteligente durante más tiempo, Nuestra pantalla móvil adaptable más brillante bajo el sol",
@@ -503,14 +481,13 @@ const product28 = new Product(
   [
     "../public/galaxy-1.avif",
     "../public/galaxy-2.avif",
-    "../public/galaxy-3.avif"
+    "../public/galaxy-3.avif",
   ],
   ["Black", "Silver"],
   21,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product12 = new Product(
+);
+const product12 = new Product(
   "K2C3X58",
   "Apple Iphone 14 128gb",
   "Cámara posterior: Principal de 12 Mpx Ultra gran angular de 12 Mpx: Cámara frontal: 12MP Tamaño de la pantalla: 6.1 pulgadas  Memoria interna: 128GB Núcleos del procesador: No aplica Memoria expandible: No aplica Carga rápida: Sí Flash frontal: Sí Marca y modelo del procesador: Apple Chip A15 Bionic Velocidad del procesador: CPU de 6 núcleos (2 de rendimiento y 4 de eficiencia) GPU de 5 núcleos: Neural Engine de 16 núcleos: Memoria RAM: No aplica Batería: No aplica Memoria externa incluida: No Tipo de pantalla: Super Retina XDR Sistema operativo: IOS Lector de huella: No GPS integrado: Sí Conexión Bluetooth: Sí Resistente al agua: IP68 (Protegido contra inmersión) Conectividad: 5G Dual SIM: Doble SIM (Nano SIM y eSIM) Marca: Apple Sensores: Face ID Barómetro: Giroscopio de alto rango dinámico: Acelerómetro de fuerza g alta: Sensor de proximidad: Doble sensor de luz ambiental: Modelo: MPUF3BE/A Nombre comercial: Iphone 14 Tipo: Smartphones Alto: 14.67cm Ancho: 7.15cm Profundidad: 0.78cm Peso: 0.174kg Garantía del proveedor: 1 año Accesorios que incluye: Cable de USBC a conector Lightning Documentación: Número de certificación: No aplica Tasa de refresco: No aplica Versión conexión bluetooth: Bluetooth 5.3 Potencia de carga: No aplica.",
@@ -519,14 +496,13 @@ const product28 = new Product(
   [
     "../public/iphone-1.avif",
     "../public/iphone-2.avif",
-    "../public/iphone-3.avif"
+    "../public/iphone-3.avif",
   ],
   ["Midnight", "purple"],
   26,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product13 = new Product(
+);
+const product13 = new Product(
   "K8S2V39",
   "Audifonos Skullcandy Dime Chill Grey",
   "Audifonos Skullcandy Dime Chill Grey, bateria de larga duracion, hasta 28h de uso continuo, cancelacion de ruido, case de recarga de 8 horas, disponible en color blanco, azul y negro.",
@@ -535,30 +511,24 @@ const product28 = new Product(
   [
     "../public/skull-1.avif",
     "../public/skull-2.avif",
-    "../public/skull-3.avif"
+    "../public/skull-3.avif",
   ],
   ["Black", "White", "Blue"],
   12,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product14 = new Product(
+);
+const product14 = new Product(
   "C01EG20",
   "Parlante Jbl Charge 5 IP67 30 Watts Azul",
   "La última versión de la Serie Charge de JBL Charge 5 incluye topes de silicona y un llamativo logo de JBL, El altavoz combina una estructura resistente y duradera con un diseño elegante y audaz que se destacará en cualquier escenario. Versión de Bluetooth: 5.1 JBL Signature Pro Bass Radiators, Sonido Extra Bass Emblematico JBL Conecte de forma inalámbrica hasta 2 teléfonos inteligentes o tabletas y túrnense. Rendimiento de sonido increíble con audio rico y claro. Lleva la fiesta a cualquier lugar con 20 horas de musica Diseño con proteccion IP67 a prueba de agua y polvo Conecta varios JBL a la Vez compatibles con JBL PartyBoost para obtener un sonido lo suficientemente grande para cualquier público.",
   899,
   1,
-  [
-    "../public/jbl-1.avif",
-    "../public/jbl-2.avif",
-    "../public/jbl-3.avif"
-  ],
+  ["../public/jbl-1.avif", "../public/jbl-2.avif", "../public/jbl-3.avif"],
   ["Black", "Silver"],
   47,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product3 = new Product(
+);
+const product3 = new Product(
   "D2L8B21",
   "Televisor Samsung Smart Tv 55| Crystal Uhd 4k Un55cu8000gxpe (nuevo)",
   "Tamaño de la pantalla: 55 Resolución: 4K Ultra HD Tecnología: CRYSTAL UHD Conexión Bluetooth: Si Entradas USB: 2 Smart TV: Si Entradas HDMI: 3 Control remoto incluido: Si Modelo: UN55CU8000GXPE Tipo: Televisores Entradas VGA: Sin entradas Entradas RCA: Sin entradas Entradas auxiliares de 3.5 mm: No incluye Entrada Internet: Sí Conexión WiFi: Si Android TV: No Peso: 21 2 kg: Profundidad: 22 |63/2:|57: 3D: No Lentes 3D incluidos: No Marca: Samsung Sistema operativo: Tizen Condición del producto: Nuevo.",
@@ -567,14 +537,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/19849001_01/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/19849001_02/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/19849001_03/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/19849001_03/w=800,h=800",
   ],
   ["Black", "Silver"],
   21,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product16 = new Product(
+);
+const product16 = new Product(
   "Ñ6R2N92",
   "Bicicleta Eléctrica Plegable Litio Extraíble Shimano 7 Aro20",
   "Bicicleta Eléctrica Plegable GreenLine FL2 NEGRO, Calidad y confianza para todos tus viajes ✅Plegable, batería extraíble, Litio 36V 8AH, ✅Autonomía 30 – 35 km , velocidad crucero, ✅Velocidad 25 km/h, sistema de cambios SHIMANO 7V, aro 20, faro LED, ✅Asiento regulable, claxon, luz freno y dos juego de llaves..",
@@ -583,14 +552,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/128474520_01/w=1500,h=1500",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/128474520_02/w=1500,h=1500",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/128474520_04/w=1500,h=1500"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/128474520_04/w=1500,h=1500",
   ],
   ["Black", "Silver"],
   20,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product17 = new Product(
+);
+const product17 = new Product(
   "M5AV903",
   "Consola PS4 Slim 1TB Negro + 2 Mandos + Sports FC 24 Reacondicionada",
   "Garantía por la consola PS4 durante 12 meses. La garantía no incluye a los accesorios, solo consola PS4 No se acepta garantía por golpes..",
@@ -599,14 +567,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/125827653_01/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/125827653_02/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/125827653_03/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/125827653_03/w=800,h=800",
   ],
-  ["Black","Blue"],
+  ["Black", "Blue"],
   18,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product18 = new Product(
+);
+const product18 = new Product(
   "M7C9Z24",
   "Bicicleta Spinning Pro Bodytone Elite",
   "Tipo de resistencia: Magnética Niveles de resistencia: 8 Trabaja: Ejercita los músculos de las piernas trabaje glúteos y abdomen.: Información en pantalla: Computadora de 5 funciones: Scan Distancia: Calorías: Tiempo: Velocidad.: Peso máximo del usuario: 100KG Marca: BODYTONE ELITE Modelo: YQ2209 Tipo: Bicicletas de spinning Alto: 122 cm Ancho: 52 cm Largo: 130 cm Peso: 30 30 kg: Material: Acero Pantalla integrada: Sí Manubrio ajustable: Sí Pedales ajustables: Sí Porta botellas: No Ventilador integrado: No Asiento ajustable: Sí Piñón: Fijo Incluye armado: No Incluye ruedas: Sí ¿Qué incluye?: NO INCLUYE ACCESORIOS Hecho en: China  Garantía del proveedor: 6 MESES Requiere armado: Sí Información adicional: 1- Manillar ajustable 2- Asiento ajustable en altura 3- Tensión continua regulable 4- Tacos antideslizantes 5- Pedales ajustables Condicion del producto: Nuevo.",
@@ -615,14 +582,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/883145856_1/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/883145856_2/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/883145856_3/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/883145856_3/w=800,h=800",
   ],
   ["Black", "Silver"],
   53,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product19 = new Product(
+);
+const product19 = new Product(
   "Q8HVC85",
   "Termoventilador Calefactor Kendal KFH-18",
   "Al elegir Kendal, eliges calidad, rendimiento y un servicio personalizado. Estamos emocionados de expandir nuestra presencia a Perú y llevar la experiencia de climatización de Kendal a nuevos hogares. Descubre lo que la marca líder en climatización tiene para ofrecer y únete a la familia Kendal para disfrutar de un ambiente perfecto en tu hogar, sin importar las condiciones externas. Siempre con el Respaldo de Empresas Mar del Sur, Distribuidor Oficial en Perú y Chile.",
@@ -631,14 +597,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/129903177_1/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/5752962_2/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/5752962_3/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/5752962_3/w=800,h=800",
   ],
   ["White", "Silver"],
   30,
   "Incluye impuesto País y percepción AFIP"
-
-  );
-  const product20  = new Product(
+);
+const product20 = new Product(
   "B5E6B46",
   "Xiaomi Watch 2 Black Case With Black Tpu Strap",
   "Marca: XIAOMI Modelo: AC001XIA98 Tipo: Smartwatch Género: Unisex Tipo de pantalla: Digital Tamaño de la pantalla: 1.4 pulgadas Ajuste del brillo: Sí Alarma: Sí Batería: 65h (BT Version) GPS integrado: Sí Medición de valores corporales: Sí",
@@ -647,14 +612,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/20214441_1/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/20214441_2/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/20214441_3/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/20214441_3/w=800,h=800",
   ],
   ["Black", "Blue"],
   13,
   "Incluye impuesto País y percepción AFIP"
-
-  );  
-  const product2 = new Product(
+);
+const product2 = new Product(
   "D2T7G86",
   "Dormitorio Samay 2 Plazas + Cabecera + Sofá Cama + 2 Almohadas",
   "Nivel de confort: Intermedio Tamaño: 2 plazas Relleno: Espuma de alta densidad y panel de resortes bonell Incluye: 02 almohadas + sofá cama + cabecera Garantía: 4 años para colchón y 1 año para tarima",
@@ -663,14 +627,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/42747931_1/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/42747931_2/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/42747931_3/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/tottusPE/42747931_3/w=800,h=800",
   ],
   ["Black", "White"],
   28,
   "Incluye impuesto País y percepción AFIP"
-
-  );  
-  const product21 = new Product(
+);
+const product21 = new Product(
   "A4W2U16",
   "Pantuflas para Niñas",
   "Material superior: Felpa Material de la suela: PVC (Planta de goma) Tipo de artículo: Pantuflas tipo zapatillas Altura del tacón:Plano (≤1 cm) Compatible con: Se adapta a la talla real, tome su talla normal. Material de la plantilla: PVC Número de modelo: Unicornio Temporada: Otoño / Invierno Ideales para la comodidad del hogar¡",
@@ -679,14 +642,13 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/130769622_01/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/130769622_02/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/130769622_03/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/130769622_03/w=800,h=800",
   ],
   ["Whiteblue", "Blue"],
   40,
   "Incluye impuesto País y percepción AFIP"
-
-  );  
-  const product22 = new Product(
+);
+const product22 = new Product(
   "Q2T7O16",
   "Sofá Gatsby 3 Cuerpos Tela",
   "Productos elegantes, sobrios y nobles, para entregar sofisticación a la cotidianidad, con una visión contemporánea, un diseño actual y diferenciado, sin perder atemporalidad.",
@@ -695,13 +657,12 @@ const product28 = new Product(
   [
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/882728088_1/w=800,h=800",
     "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/882728088_2/w=800,h=800",
-    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/882728088_4/w=800,h=800"
+    "https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/882728088_4/w=800,h=800",
   ],
   ["Brown", "Gray"],
   47,
   "Incluye impuesto País y percepción AFIP"
-
-  );  
+);
 //Creamos el array de los productos
 const products = [
   product1,
@@ -748,7 +709,7 @@ const products = [
   product42,
   product43,
   product44,
-  product45
+  product45,
 ];
 
 export default products;
