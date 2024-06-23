@@ -2,6 +2,7 @@ export default interface ProductCard{
     id: string;
     title: string;
     price: number;
-    image: string;
-    color: string;
+    images: Array<string>;
+    colors: Array<string>;
+    descuento:number;
 }

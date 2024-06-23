@@ -1,4 +1,12 @@
-export default function CartResume({ total }) {
+
+
+interface props {
+  total: number;
+}
+
+export default function CartResume(props: props) {
+
+  const {total} = props
   return (
     <div className="w-[340px] h-[220px] flex flex-col justify-between rounded-md p-[30px] m-[10px] bg-[#f2f2f2]">
       <div className="flex-grow flex flex-col justify-between">
@@ -12,7 +20,8 @@ export default function CartResume({ total }) {
           <strong className="font-bold">S/{total.toFixed(2)}</strong>
         </div>
         <small className="pb-[10px]">
-          Incluye impuesto general de ventas (I.G.V) <br /> no incluye costo de envío.
+          Incluye impuesto general de ventas (I.G.V) <br /> no incluye costo de
+          envío.
         </small>
       </div>
       <button
@@ -25,3 +34,5 @@ export default function CartResume({ total }) {
     </div>
   );
 }
+
+

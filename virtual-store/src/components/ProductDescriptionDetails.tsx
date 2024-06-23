@@ -1,16 +1,11 @@
+import ProductProp from "../assets/interface/ProductProps";
 
 
-interface Product {
-  title: string;
-  colors: string[];
-  description: string;
-}
 
-interface ProductDescriptionDetailProp{
-	product: Product
-}
+export default function ProductDescriptionDetail(props: ProductProp) {
 
-function ProductDescriptionDetail({product}: ProductDescriptionDetailProp) {
+const {product} = props
+
   return (
     <>
       <div className=" flex-col w-[340px] p-[10px] m-[10px] "> {/* product-description-block */}
@@ -25,8 +20,8 @@ function ProductDescriptionDetail({product}: ProductDescriptionDetailProp) {
               id="color"
               defaultValue={product.colors[0]}
             >
-              {product.colors.map((each, index) => (
-                <option key={index} value={each}>
+              {product.colors.map((each) => (
+                <option key={each} value={each}>
                   {each}
                 </option>
               ))}
@@ -41,4 +36,4 @@ function ProductDescriptionDetail({product}: ProductDescriptionDetailProp) {
     </>
   );
 }
-export default ProductDescriptionDetail;
+

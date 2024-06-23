@@ -7,18 +7,19 @@ import ImagesProductDetails from "../components/imagesProductDetails";
 import ProductCheckout from "../components/ProductCheckout";
 import ProductDescriptionDetail from "../components/ProductDescriptionDetails";
 import { useParams } from "react-router-dom";
-import products from "../assets/product";
+import Product from "../assets/interface/product";
+import products from "../assets/product.js"
 
 function Detalles() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
   const { id } = useParams();
-  const product = products.find((each) => each.id === id);
+  const product:Product = products.find((each) => each.id === id);
   if (product)
     return (
       <>
         <Navbar search={true} />
-        <Hero Primero="Detalles" segundo="Del producto" />
+        {!product && <Hero Primero="Detalles" segundo="Del producto" />}
         <main className="w-full flex justify-center items-center p-[20px] ">
           <div className=" w-[1080px] flex flex-wrap  justify-between"> {/* details-container */}
             {product && (

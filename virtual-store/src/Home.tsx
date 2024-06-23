@@ -1,17 +1,37 @@
-
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
-import products from "./assets/product";
-import { useState } from "react";
-import { faChevronRight, faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import {
+  faChevronRight,
+  faChevronLeft,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Button from "./components/Button";
+import Product from "./assets/interface/product";
+import { useSelector } from "react-redux";
 
 function Home() {
   const [currentPage, setCurrentPage] = useState(0);
+  const [products, setProducts] = useState<Product[]>([]);
   const productsPerPage = 9;
+  const text = useSelector((store) => store.products.text);
+
+  useEffect(() => {
+    axios
+      .get<Product[]>("/product.json")
+      .then((res) => {
+        const filterData = res.data.filter((each) =>
+          each.title.toLowerCase() .includes(text.toLowerCase())
+        );
+        setProducts(filterData);
+      })
+      .catch((err) => console.log(err));
+  }, [text]);
+  console.log(text);
+
   const totalPages = Math.ceil(products.length / productsPerPage);
 
   const handleNextPage = () => {
@@ -31,21 +51,24 @@ function Home() {
       <Navbar search={true} />
       <Hero Primero="Tecnologia" segundo="Renovada" />
       <main className="w-full flex justify-center items-center p-[20px]">
-        <div className="w-[1080px] flex flex-wrap justify-between" id="products">
-          {displayedProducts.map((product, index) => (
+        <div
+          className="w-[1080px] flex flex-wrap justify-between"
+          id="products"
+        >
+          {displayedProducts.map((each: Product) => (
             <ProductCard
-              key={index}
-              id={product.id}
-              title={product.title}
-              price={product.price}
-              color={product.color}
-              descuento={product.descuento}
-              images={product.images[0]}
+              key={each.id}
+              id={each.id}
+              title={each.title}
+              price={each.price}
+              colors={each.colors}
+              descuento={each.descuento}
+              images={each.images[0]} // Aquí estamos pasando la URL correcta
             />
           ))}
         </div>
       </main>
-      <div className='flex items-center justify-center gap-4'>
+      <div className="flex items-center justify-center gap-4">
         <Button
           variant="secondary"
           disabled={currentPage === 0}

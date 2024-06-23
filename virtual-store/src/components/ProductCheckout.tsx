@@ -1,18 +1,11 @@
 import classNames from "classnames";
 import { useState, useRef, useEffect } from "react";
+import Product from "../assets/interface/product";
+import ProductProp from "../assets/interface/ProductProps";
 
-interface Product {
-  id: string;
-  price: number;
-  descuento: number;
-  units: number;
-}
 
-interface ProductCheckoutProp {
-  product: Product;
-}
-
-function ProductCheckout({ product }: ProductCheckoutProp) {
+export default function ProductCheckout( props : ProductProp) {
+  const {product} = props
   const units = useRef<HTMLInputElement>(null);
   const [quantity, setQuantity] = useState(1);
   const [precio, setPrecio] = useState(0);
@@ -135,4 +128,4 @@ function ProductCheckout({ product }: ProductCheckoutProp) {
   );
 }
 
-export default ProductCheckout;
+

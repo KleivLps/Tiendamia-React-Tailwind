@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { useEffect } from "react";
+import ProductProp from "../assets/interface/ProductProps";
 
-interface Product {
-  title: string
-  images: string[];
-}
 
-interface ImagesProductDetailsProp{
-	product: Product
-}
 
-function ImagesProductDetails({ product }: ImagesProductDetailsProp) {
+export default function ImagesProductDetails( props : ProductProp) {
+
+  const {product} = props 
+  
   //añadido del state para renderizar las fotos en miniatura
 
 const[thumb, setThumb] = useState(product.images[0] || "/mock1.jpg");
@@ -18,17 +15,17 @@ const[thumb, setThumb] = useState(product.images[0] || "/mock1.jpg");
 //añadido de efect para renderizar las fotos mas grandes
 useEffect(()=> {
   setThumb(product.images[0] || "/mock1.jpg")
-},[product])
+},[product.id])
 
   return (
     <>
       <section className="flex w-[340px] p-[10px] m-2.5 "> {/* product-images-block */}
         <div className="w-[44px] m-1  "> {/* product-images */}
           {product.images.map(
-            (each, index) =>
+            (each) =>
               (
                 <img
-                  key={index}
+                  key={each}
                   className=" w-[40px] h-[40px] object-cover " /* mini-img */
                   src={each}
                   alt={product.title}
@@ -47,4 +44,4 @@ useEffect(()=> {
     </>
   );
 }
-export default ImagesProductDetails;
+

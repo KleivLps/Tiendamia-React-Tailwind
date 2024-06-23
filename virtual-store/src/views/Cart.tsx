@@ -4,9 +4,13 @@ import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import CartCard from "../components/CartCard";
 import CartResume from "../components/CartResume";
+import Product from "../assets/interface/product";
 
 function Carrito() {
-  const [productsOnCart, setProductsOnCart] = useState([]);
+  const [productsOnCart, setProductsOnCart] = useState <Product[]>([]);
+  
+
+
   const [total, setTotal] = useState(0);
 
   useEffect(() => {

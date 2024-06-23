@@ -46,7 +46,7 @@ export default function CartCard({ product, updateTotal, removeProduct }) {
       <div className="flex flex-col justify-start flex-grow">
         <div className="lg:h-[120px] flex flex-col justify-between flex-grow p-[10px]">
           <span>
-            <strong className="block lg:inline-block text-[16px]">
+            <strong className="font-custom text-[14px] leading-6 font-bold flex flex-col overflow-hidden line-clamp-2">
               {title ? title : "Sin título"}{" "}
             </strong>
             {color && (
